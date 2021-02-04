@@ -5,10 +5,13 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "code": "brain-games.js",
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "code": "bin/games/brain-games.js",
+    "brain-games": "bin/games/brain-games.js",
+    "brain-even": "bin/games/brain-even.js",
+    "brain-calc": "bin/games/brain-calc.js",
+    "brain-gcd": "bin/games/brain-gcd.js",
+    "brain-progression": "bin/games/brain-progression.js",
+    "brain-prime": "bin/games/brain-prime.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,9 +27,11 @@
   },
   "homepage": "https://github.com/kirill-medved/frontend-project-lvl1#readme",
   "dependencies": {
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "7.18.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1"
   }
 }
