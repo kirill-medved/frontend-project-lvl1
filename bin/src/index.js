@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { getUserName, sayHello } from "./cli.js";
+const MAX_WINS = 3;
 
 // wrapper over the game
 const startGame = (gameFunc, conditions) => {
@@ -9,7 +10,7 @@ const startGame = (gameFunc, conditions) => {
   sayHello(userName);
   console.log(conditions);
 
-  let counterOfWins = 0; // max wins = 3
+  let counterOfWins = 0;
 
   do {
     let result = gameFunc();
@@ -17,11 +18,9 @@ const startGame = (gameFunc, conditions) => {
       return console.log(`Let's try again, ${userName}!`);
     }
     counterOfWins += 1;
-  } while (counterOfWins < 3);
+  } while (counterOfWins < MAX_WINS);
 
-  if (counterOfWins === 3) {
-    return console.log(`Congratulations, ${userName}!`);
-  }
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default startGame;

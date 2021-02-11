@@ -15,5 +15,3 @@ export const userGreeting = () => {
   const userName = getUserName();
   return sayHello(userName);
 };
-
-console.log(`hello!!!!!!!!!`);
