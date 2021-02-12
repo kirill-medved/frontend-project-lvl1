@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/kirill-medved/frontend-project-lvl1#readme",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "1.4.10"
   },
   "devDependencies": {
     "eslint": "7.18.0",
