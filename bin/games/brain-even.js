@@ -14,7 +14,7 @@ const evenGame = () => {
 
   if (correctAnswer !== userAnswer) {
     console.log(
-      `\'${userAnswer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'`
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
     );
     return false;
   }

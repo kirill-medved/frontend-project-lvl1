@@ -14,7 +14,7 @@ const progressionGame = () => {
     Math.random() * Math.floor(lengthOfProgression - 1)
   );
 
-  let progression = [];
+  const progression = [];
   for (let i = 0; i < lengthOfProgression; i++) {
     if (i === positionOfHideNumber) {
       progression.push("..");
@@ -30,7 +30,7 @@ const progressionGame = () => {
 
   if (Number(correctAnswer) !== Number(userAnswer)) {
     console.log(
-      `\'${userAnswer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'`
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
     );
     return false;
   }
