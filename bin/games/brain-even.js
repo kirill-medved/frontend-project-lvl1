@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import startGame from "../src/index.js";
+import readlineSync from 'readline-sync';
+import { startGame as game } from '../src/index.js';
 
 const conditionsOfTheEvenGame =
   'Answer "yes" if the number is even, otherwise answer "no".';
@@ -10,7 +10,7 @@ const evenGame = () => {
   const userAnswer = readlineSync.question(
     `Question: ${generateRandomNumber}\nYour answer: `
   );
-  const correctAnswer = generateRandomNumber % 2 === 0 ? "yes" : "no";
+  const correctAnswer = generateRandomNumber % 2 === 0 ? 'yes' : 'no';
 
   if (correctAnswer !== userAnswer) {
     console.log(
@@ -18,10 +18,9 @@ const evenGame = () => {
     );
     return false;
   }
-  if (correctAnswer === userAnswer) {
-    console.log("Correct!");
-    return true;
-  }
+
+  console.log('Correct!');
+  return true;
 };
 
-startGame(evenGame, conditionsOfTheEvenGame);
+game(evenGame, conditionsOfTheEvenGame);

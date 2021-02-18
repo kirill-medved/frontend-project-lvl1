@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import startGame from "../src/index.js";
+import readlineSync from 'readline-sync';
+import { startGame as game } from '../src/index.js';
 
-const conditionsOfTheEvenGame = "What is the result of the expression?";
+const conditionsOfTheEvenGame = 'What is the result of the expression?';
 
 const calcGame = () => {
   const randomNumberOne = Math.floor(Math.random() * Math.floor(1000));
@@ -10,15 +10,17 @@ const calcGame = () => {
 
   const randomOperator = () => {
     const number = Math.floor(Math.random() * Math.floor(9));
+    let value = null;
     if (number <= 3) {
-      return "+";
+      value = '+';
     }
     if (number > 3 && number <= 6) {
-      return "-";
+      value = '-';
     }
     if (number > 6) {
-      return "*";
+      value = '*';
     }
+    return value;
   };
   const accidentalOperation = randomOperator();
   const userAnswer = readlineSync.question(
@@ -28,13 +30,13 @@ const calcGame = () => {
   let correctAnswer = null;
 
   switch (accidentalOperation) {
-    case "+":
+    case '+':
       correctAnswer = randomNumberOne + randomNumberTwo;
       break;
-    case "-":
+    case '-':
       correctAnswer = randomNumberOne - randomNumberTwo;
       break;
-    case "*":
+    case '*':
       correctAnswer = randomNumberOne * randomNumberTwo;
       break;
 
@@ -49,10 +51,8 @@ const calcGame = () => {
     );
     return false;
   }
-  if (correctAnswer === userAnswer) {
-    console.log("Correct!");
-    return true;
-  }
+  console.log('Correct!');
+  return true;
 };
 
-startGame(calcGame, conditionsOfTheEvenGame);
+game(calcGame, conditionsOfTheEvenGame);

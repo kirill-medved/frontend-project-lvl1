@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import startGame from "../src/index.js";
 
-const conditionsOfTheEvenGame = "What number is missing in the progression?";
+import readlineSync from 'readline-sync';
+import { startGame as game } from '../src/index.js';
+
+const conditionsOfTheEvenGame = 'What number is missing in the progression?';
 
 const progressionGame = () => {
   const firstNumber = Math.floor(Math.random() * Math.floor(1000));
@@ -15,16 +16,16 @@ const progressionGame = () => {
   );
 
   const progression = [];
-  for (let i = 0; i < lengthOfProgression; i++) {
+  for (let i = 0; i < lengthOfProgression; i += 1) {
     if (i === positionOfHideNumber) {
-      progression.push("..");
-      continue;
+      progression.push('..');
+    } else {
+      progression.push(firstNumber + i * stepOfProgression);
     }
-    progression.push(firstNumber + i * stepOfProgression);
   }
 
   const userAnswer = readlineSync.question(
-    `Question: ${progression.toString().split(",").join(" ")}\nYour answer: `
+    `Question: ${progression.toString().split(',').join(' ')}\nYour answer: `
   );
   const correctAnswer = firstNumber + positionOfHideNumber * stepOfProgression;
 
@@ -34,10 +35,9 @@ const progressionGame = () => {
     );
     return false;
   }
-  if (correctAnswer === userAnswer) {
-    console.log("Correct!");
-    return true;
-  }
+
+  console.log('Correct!');
+  return true;
 };
 
-startGame(progressionGame, conditionsOfTheEvenGame);
+game(progressionGame, conditionsOfTheEvenGame);

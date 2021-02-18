@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
-import { getUserName, sayHello } from "./cli.js";
+import { getUserName, sayHello } from './cli.js';
+
 const MAX_WINS = 3;
 
 // wrapper over the game
 const startGame = (gameFunc, conditions) => {
-  //greeting User
+  // greeting User
   const userName = getUserName();
   sayHello(userName);
   console.log(conditions);
@@ -13,7 +14,7 @@ const startGame = (gameFunc, conditions) => {
   let counterOfWins = 0;
 
   do {
-    let result = gameFunc();
+    const result = gameFunc();
     if (result === false) {
       return console.log(`Let's try again, ${userName}!`);
     }
