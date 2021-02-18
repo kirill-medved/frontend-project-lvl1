@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { startGame as game } from '../src/index.js';
+import startGame from '../src/index.js';
 
 const conditionsOfTheEvenGame = 'What number is missing in the progression?';
 
@@ -40,4 +40,4 @@ const progressionGame = () => {
   return true;
 };
 
-game(progressionGame, conditionsOfTheEvenGame);
+startGame(progressionGame, conditionsOfTheEvenGame);

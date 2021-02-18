@@ -10,4 +10,11 @@ extends:
 parserOptions:
   ecmaVersion: 12
   sourceType: module
-rules: { no-console: 0, import/extensions: 0, import/named: off }
+rules:
+  {
+    no-console: 0,
+    import/extensions: 0,
+    import/named: off,
+    import/no-named-as-default: off,
+    import/no-named-as-default-member: off,
+  }
