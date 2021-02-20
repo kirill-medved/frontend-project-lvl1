@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGame from '../src/index.js';
+import { startGame } from '../src/index.js';
 
 const conditionsOfTheEvenGame = 'What is the result of the expression?';
 
@@ -24,7 +24,7 @@ const calcGame = () => {
   };
   const accidentalOperation = randomOperator();
   const userAnswer = readlineSync.question(
-    `Question: ${randomNumberOne} ${accidentalOperation} ${randomNumberTwo}\nYour answer: `
+    `Question: ${randomNumberOne} ${accidentalOperation} ${randomNumberTwo}\nYour answer: `,
   );
 
   let correctAnswer = null;
@@ -47,7 +47,7 @@ const calcGame = () => {
 
   if (Number(correctAnswer) !== Number(userAnswer)) {
     console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
     );
     return false;
   }
