@@ -24,4 +24,4 @@ const startGame = (gameFunc, conditions) => {
   return console.log(`Congratulations, ${userName}!`);
 };
 
-export default startGame;
+export { startGame as default };
