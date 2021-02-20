@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGame from '../src/index.js';
+import { startGame } from '../src/index.js';
 
-const conditionsOfTheEvenGame =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const conditionsOfTheEvenGame = 'Find if given number is prime.';
 
 const primeGame = () => {
   const randomNumber = Math.floor(Math.random() * Math.floor(1000));

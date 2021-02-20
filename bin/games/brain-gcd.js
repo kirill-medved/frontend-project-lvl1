@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGame from '../src/index.js';
+import { startGame } from '../src/index.js';
 
-const conditionsOfTheEvenGame =
-  'Find the greatest common divisor of given numbers.';
+const conditionsOfTheEvenGame = 'Find the greatest divisor of given numbers.';
 
 const gcdGame = () => {
   const randomNumberOne = Math.floor(Math.random() * Math.floor(100) + 1);

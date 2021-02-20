@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGame from '../src/index.js';
+import { startGame } from '../src/index.js';
 
-const conditionsOfTheEvenGame =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+const conditionsOfTheEvenGame = 'Find if the number is even.';
 
 const evenGame = () => {
   const generateRandomNumber = Math.floor(Math.random() * Math.floor(1000));
