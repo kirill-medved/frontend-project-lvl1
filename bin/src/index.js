@@ -5,7 +5,7 @@ import { getUserName, sayHello } from './cli.js';
 const MAX_WINS = 3;
 
 // wrapper over the game
-const startGame = (gameFunc, conditions) => {
+export default function startGame(gameFunc, conditions) {
   // greeting User
   const userName = getUserName();
   sayHello(userName);
@@ -22,6 +22,4 @@ const startGame = (gameFunc, conditions) => {
   } while (counterOfWins < MAX_WINS);
 
   return console.log(`Congratulations, ${userName}!`);
-};
-
-export default startGame;
+}
