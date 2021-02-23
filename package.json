@@ -30,6 +30,7 @@
     "readline-sync": "1.4.10"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "7.13.4",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "7.2.0",
