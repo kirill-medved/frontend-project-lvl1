@@ -24,4 +24,4 @@ export const startGame = (gameFunc, conditions) => {
   return console.log(`Congratulations, ${userName}!`);
 };
 
-export const hello = () => 'Hello!';
+export const hello = () => 'sdfsdsdfsfsfsdfsdfsdfsdfds!';

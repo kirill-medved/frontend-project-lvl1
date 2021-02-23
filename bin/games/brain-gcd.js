@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { startGame } from '../src/index.js';
+import { startGame } from '../src';
 
 const conditionsOfTheEvenGame = 'Find the greatest divisor of given numbers.';
 
