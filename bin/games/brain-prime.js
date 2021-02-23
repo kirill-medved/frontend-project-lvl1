@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { startGame } from '../src/index';
+import { startGame } from '../src/index.js';
 
 const conditionsOfTheEvenGame = 'Find if given number is prime.';
 
