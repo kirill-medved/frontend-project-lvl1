@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGame from '../src/index';
+import startGame from '../src/index.js';
 
 const conditionsOfTheEvenGame = 'What is the result of the expression?';
 
