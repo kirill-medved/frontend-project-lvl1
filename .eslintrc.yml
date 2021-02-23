@@ -4,7 +4,7 @@ env:
 extends:
   - airbnb-base
   - prettier
-  - prettier/prettier
+  - plugin:prettier/recommended
 # parser: '@babel/eslint-parser'
 rules:
   {
