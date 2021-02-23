@@ -1,40 +1,38 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import startGame from "../src/index.js";
+import readlineSync from 'readline-sync';
+import startGame from '../src/index.js';
 
-const conditionsOfTheEvenGame =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const conditionsOfTheEvenGame = 'Find if given number is prime.';
 
 const primeGame = () => {
   const randomNumber = Math.floor(Math.random() * Math.floor(1000));
 
   const userAnswer = readlineSync.question(
-    `Question: ${randomNumber}\nYour answer: `
+    `Question: ${randomNumber}\nYour answer: `,
   );
-  let correctAnswer = "yes";
+  let correctAnswer = 'yes';
   let step = 1;
   do {
     if (randomNumber === 0 || randomNumber === 1) {
-      correctAnswer = "no";
+      correctAnswer = 'no';
       break;
     }
-    if (randomNumber % step === 0 && step != 1) {
-      correctAnswer = "no";
+    if (randomNumber % step === 0 && step !== 1) {
+      correctAnswer = 'no';
       break;
     }
-    step = step + 1;
+    step += 1;
   } while (step < randomNumber);
 
   if (correctAnswer !== userAnswer) {
     console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
     );
     return false;
   }
-  if (correctAnswer === userAnswer) {
-    console.log("Correct!");
-    return true;
-  }
+
+  console.log('Correct!');
+  return true;
 };
 
 startGame(primeGame, conditionsOfTheEvenGame);
