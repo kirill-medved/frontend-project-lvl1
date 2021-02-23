@@ -5,7 +5,7 @@ import { getUserName, sayHello } from './cli.js';
 const MAX_WINS = 3;
 
 // wrapper over the game
-export const startGame = (gameFunc, conditions) => {
+const startGame = (gameFunc, conditions) => {
   // greeting User
   const userName = getUserName();
   sayHello(userName);
@@ -24,4 +24,4 @@ export const startGame = (gameFunc, conditions) => {
   return console.log(`Congratulations, ${userName}!`);
 };
 
-export const hello = () => 'sdfsdsdfsfsfsdfsdfsdfsdfds!';
+export default startGame;

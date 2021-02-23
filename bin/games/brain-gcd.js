@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { startGame } from '../src/index.js';
+import * as startGame from '../src/index.js';
 
 const conditionsOfTheEvenGame = 'Find the greatest divisor of given numbers.';
 
@@ -12,8 +12,12 @@ const gcdGame = () => {
   );
 
   let correctAnswer = 1;
-  const minNumber =
-    randomNumberOne > randomNumberTwo ? randomNumberTwo : randomNumberOne;
+  let minNumber = null;
+  if (randomNumberOne > randomNumberTwo) {
+    minNumber = randomNumberTwo;
+  } else {
+    minNumber = randomNumberOne;
+  }
 
   for (let i = 0; i <= minNumber; i += 1) {
     if (randomNumberOne % i === 0 && randomNumberTwo % i === 0) {
