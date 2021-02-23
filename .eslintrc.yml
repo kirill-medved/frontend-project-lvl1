@@ -13,5 +13,6 @@ rules:
     comma-dangle: [2, always-multiline],
     import/no-name-as-default: 0,
     import/no-name-as-default-member: 0,
-    import/named: 0,
+    import/named: off,
+    operator-linebreak: off,
   }
