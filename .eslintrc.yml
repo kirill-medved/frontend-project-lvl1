@@ -8,9 +8,9 @@ extends:
 parser: '@babel/eslint-parser'
 rules:
   {
+    import/no-name-as-default: 0,
+    import/no-name-as-default-member: 0,
     no-console: 0,
     import/extensions: 0,
     comma-dangle: [2, always-multiline],
-    import/no-name-as-default: 0,
-    import/no-name-as-default-member: 0,
   }
